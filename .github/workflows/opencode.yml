@@ -28,6 +28,6 @@ jobs:
       - name: Run opencode
         uses: sst/opencode/github@latest
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ALIBABA_TOKEN_PLAN_API_KEY: ${{ secrets.ALIBABA_TOKEN_PLAN_API_KEY }}
         with:
-          model: anthropic/claude-sonnet-5-5
+          model: alibaba-token-plan/qwen3.8-max
