@@ -30,4 +30,4 @@ jobs:
         env:
           ALIBABA_TOKEN_PLAN_API_KEY: ${{ secrets.ALIBABA_TOKEN_PLAN_API_KEY }}
         with:
-          model: alibaba-token-plan/qwen3.8-max
+          model: alibaba-token-plan/deepseek-v4.1-flash-1017
