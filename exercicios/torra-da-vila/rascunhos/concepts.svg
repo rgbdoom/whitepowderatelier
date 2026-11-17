@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="984" viewBox="0 0 1600 984"><defs><filter id="grey"><feColorMatrix type="saturate" values="0"/></filter></defs><rect width="1600" height="984" fill="#f7f7f4"/><text x="60" y="78" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#161616">Logo concepts</text><text x="60" y="116" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" fill="#6b6b6b">Concepts for review — pick a direction (or tell me what you like in each).</text><rect x="60" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#161616" stroke-width="2"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="90" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito A: Arco da Vila — Monograma T + V como portal acolhedor -->
+  <!-- T (lintel/abrigo) -->
+  <path d="M 36,36 H 220 V 72 H 146 V 118 H 110 V 72 H 36 Z" fill="#000000"/>
+  <!-- V (vão/portão da vila) -->
+  <path d="M 38,94 H 76 L 128,192 L 180,94 H 218 L 146,224 H 110 Z" fill="#000000"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" x="90" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito A Lockup [exploratório: <text> provisório para validação tipográfica] -->
+  <g transform="translate(16, 28) scale(0.78)">
+    <path d="M 36,36 H 220 V 72 H 146 V 118 H 110 V 72 H 36 Z" fill="#000000"/>
+    <path d="M 38,94 H 76 L 128,192 L 180,94 H 218 L 146,224 H 110 Z" fill="#000000"/>
+  </g>
+  <text x="240" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" letter-spacing="-1" fill="#000000">Torra da Vila</text>
+  <text x="242" y="176" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="4.5" fill="#000000">CAFÉS ESPECIAIS · SP / MG</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="90" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito A: Arco da Vila — Monograma T + V como portal acolhedor -->
+  <!-- T (lintel/abrigo) -->
+  <path d="M 36,36 H 220 V 72 H 146 V 118 H 110 V 72 H 36 Z" fill="#000000"/>
+  <!-- V (vão/portão da vila) -->
+  <path d="M 38,94 H 76 L 128,192 L 180,94 H 218 L 146,224 H 110 Z" fill="#000000"/>
+</svg>
+</g><text x="122" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="180" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito A: Arco da Vila — Monograma T + V como portal acolhedor -->
+  <!-- T (lintel/abrigo) -->
+  <path d="M 36,36 H 220 V 72 H 146 V 118 H 110 V 72 H 36 Z" fill="#000000"/>
+  <!-- V (vão/portão da vila) -->
+  <path d="M 38,94 H 76 L 128,192 L 180,94 H 218 L 146,224 H 110 Z" fill="#000000"/>
+</svg>
+</g><text x="196" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="238" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito A: Arco da Vila — Monograma T + V como portal acolhedor -->
+  <!-- T (lintel/abrigo) -->
+  <path d="M 36,36 H 220 V 72 H 146 V 118 H 110 V 72 H 36 Z" fill="#000000"/>
+  <!-- V (vão/portão da vila) -->
+  <path d="M 38,94 H 76 L 128,192 L 180,94 H 218 L 146,224 H 110 Z" fill="#000000"/>
+</svg>
+</g><text x="246" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="90.0" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">A · Arco da Vila</text><text x="90.0" y="808" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#161616" letter-spacing="1.5">RECOMMENDED</text><text x="90.0" y="842" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Monograma T+V como portão de vila acolhedor</text><rect x="562.667" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="592.667" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito B: Selo Editorial TdV — Etiqueta chanfrada com monograma T·V dividido por barra de edição -->
+  <path fill-rule="evenodd" fill="#000000" d="
+    M 28,44 H 192 L 228,80 V 212 H 28 Z
+    M 50,74 H 116 V 96 H 94 V 182 H 72 V 96 H 50 Z
+    M 140,74 H 164 L 174,142 L 184,74 H 208 L 186,182 H 162 Z
+  "/>
+  <!-- Ponto editorial separador (evita leitura literal "TV") -->
+  <circle cx="128" cy="128" r="10" fill="#FFFFFF"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" x="592.667" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito B Lockup [exploratório: <text> provisório para validação tipográfica] -->
+  <g transform="translate(16, 28) scale(0.78)">
+    <path fill-rule="evenodd" fill="#000000" d="
+      M 28,44 H 192 L 228,80 V 212 H 28 Z
+      M 50,74 H 116 V 96 H 94 V 182 H 72 V 96 H 50 Z
+      M 140,74 H 164 L 174,142 L 184,74 H 208 L 186,182 H 162 Z
+    "/>
+    <circle cx="128" cy="128" r="10" fill="#FFFFFF"/>
+  </g>
+  <text x="240" y="132" font-family="'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5" fill="#000000">TORRA DA VILA</text>
+  <text x="242" y="170" font-family="'Courier New', monospace" font-size="16" font-weight="700" letter-spacing="2" fill="#000000">MICROTORREFAÇÃO · VILA MARIANA</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="592.667" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito B: Selo Editorial TdV — Etiqueta chanfrada com monograma T·V dividido por barra de edição -->
+  <path fill-rule="evenodd" fill="#000000" d="
+    M 28,44 H 192 L 228,80 V 212 H 28 Z
+    M 50,74 H 116 V 96 H 94 V 182 H 72 V 96 H 50 Z
+    M 140,74 H 164 L 174,142 L 184,74 H 208 L 186,182 H 162 Z
+  "/>
+  <!-- Ponto editorial separador (evita leitura literal "TV") -->
+  <circle cx="128" cy="128" r="10" fill="#FFFFFF"/>
+</svg>
+</g><text x="624.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="682.667" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito B: Selo Editorial TdV — Etiqueta chanfrada com monograma T·V dividido por barra de edição -->
+  <path fill-rule="evenodd" fill="#000000" d="
+    M 28,44 H 192 L 228,80 V 212 H 28 Z
+    M 50,74 H 116 V 96 H 94 V 182 H 72 V 96 H 50 Z
+    M 140,74 H 164 L 174,142 L 184,74 H 208 L 186,182 H 162 Z
+  "/>
+  <!-- Ponto editorial separador (evita leitura literal "TV") -->
+  <circle cx="128" cy="128" r="10" fill="#FFFFFF"/>
+</svg>
+</g><text x="698.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="740.667" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito B: Selo Editorial TdV — Etiqueta chanfrada com monograma T·V dividido por barra de edição -->
+  <path fill-rule="evenodd" fill="#000000" d="
+    M 28,44 H 192 L 228,80 V 212 H 28 Z
+    M 50,74 H 116 V 96 H 94 V 182 H 72 V 96 H 50 Z
+    M 140,74 H 164 L 174,142 L 184,74 H 208 L 186,182 H 162 Z
+  "/>
+  <!-- Ponto editorial separador (evita leitura literal "TV") -->
+  <circle cx="128" cy="128" r="10" fill="#FFFFFF"/>
+</svg>
+</g><text x="748.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="592.6666666666667" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">B · Selo Ficha T·V</text><text x="592.6666666666667" y="814" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Etiqueta chanfrada modular para lotes e</text><text x="592.6666666666667" y="840" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">torras</text><rect x="1065.33" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1095.33" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito C: Curva & Pausa — Curva térmica da torra em V aberto com ponto de pausa à direita -->
+  <path fill="#000000" d="
+    M 32,164
+    C 32,90 72,46 112,46
+    C 138,46 150,66 156,92
+    L 168,144
+    L 196,60
+    H 224
+    L 182,196
+    C 178,208 168,214 156,214
+    C 144,214 136,206 132,192
+    L 118,128
+    C 114,108 106,96 94,96
+    C 76,96 64,120 64,164
+    V 204
+    H 32
+    Z
+  "/>
+  <circle cx="206" cy="196" r="16" fill="#000000"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" x="1095.33" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito C Lockup [exploratório: <text> provisório para validação tipográfica] -->
+  <g transform="translate(16, 28) scale(0.78)">
+    <path fill="#000000" d="
+      M 32,164
+      C 32,90 72,46 112,46
+      C 138,46 150,66 156,92
+      L 168,144
+      L 196,60
+      H 224
+      L 182,196
+      C 178,208 168,214 156,214
+      C 144,214 136,206 132,192
+      L 118,128
+      C 114,108 106,96 94,96
+      C 76,96 64,120 64,164
+      V 204
+      H 32
+      Z
+    "/>
+    <circle cx="206" cy="196" r="16" fill="#000000"/>
+  </g>
+  <text x="240" y="136" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-style="italic" font-weight="700" letter-spacing="-0.5" fill="#000000">Torra da Vila</text>
+  <text x="242" y="174" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="3.5" fill="#000000">SUL DE MINAS · SÃO PAULO</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1095.33" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito C: Curva & Pausa — Curva térmica da torra em V aberto com ponto de pausa à direita -->
+  <path fill="#000000" d="
+    M 32,164
+    C 32,90 72,46 112,46
+    C 138,46 150,66 156,92
+    L 168,144
+    L 196,60
+    H 224
+    L 182,196
+    C 178,208 168,214 156,214
+    C 144,214 136,206 132,192
+    L 118,128
+    C 114,108 106,96 94,96
+    C 76,96 64,120 64,164
+    V 204
+    H 32
+    Z
+  "/>
+  <circle cx="206" cy="196" r="16" fill="#000000"/>
+</svg>
+</g><text x="1127.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1185.33" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito C: Curva & Pausa — Curva térmica da torra em V aberto com ponto de pausa à direita -->
+  <path fill="#000000" d="
+    M 32,164
+    C 32,90 72,46 112,46
+    C 138,46 150,66 156,92
+    L 168,144
+    L 196,60
+    H 224
+    L 182,196
+    C 178,208 168,214 156,214
+    C 144,214 136,206 132,192
+    L 118,128
+    C 114,108 106,96 94,96
+    C 76,96 64,120 64,164
+    V 204
+    H 32
+    Z
+  "/>
+  <circle cx="206" cy="196" r="16" fill="#000000"/>
+</svg>
+</g><text x="1201.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1243.33" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <!-- Conceito C: Curva & Pausa — Curva térmica da torra em V aberto com ponto de pausa à direita -->
+  <path fill="#000000" d="
+    M 32,164
+    C 32,90 72,46 112,46
+    C 138,46 150,66 156,92
+    L 168,144
+    L 196,60
+    H 224
+    L 182,196
+    C 178,208 168,214 156,214
+    C 144,214 136,206 132,192
+    L 118,128
+    C 114,108 106,96 94,96
+    C 76,96 64,120 64,164
+    V 204
+    H 32
+    Z
+  "/>
+  <circle cx="206" cy="196" r="16" fill="#000000"/>
+</svg>
+</g><text x="1251.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="1095.3333333333335" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">C · Curva &amp; Pausa</text><text x="1095.3333333333335" y="814" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Curva térmica da torra em V aberto + ponto</text><text x="1095.3333333333335" y="840" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">de pausa</text></svg>

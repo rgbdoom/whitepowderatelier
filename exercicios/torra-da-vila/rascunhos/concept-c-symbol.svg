@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Conceito C: Curva & Pausa — Curva térmica da torra em V aberto com ponto de pausa à direita -->
+  <path fill="#000000" d="
+    M 32,164
+    C 32,90 72,46 112,46
+    C 138,46 150,66 156,92
+    L 168,144
+    L 196,60
+    H 224
+    L 182,196
+    C 178,208 168,214 156,214
+    C 144,214 136,206 132,192
+    L 118,128
+    C 114,108 106,96 94,96
+    C 76,96 64,120 64,164
+    V 204
+    H 32
+    Z
+  "/>
+  <circle cx="206" cy="196" r="16" fill="#000000"/>
+</svg>

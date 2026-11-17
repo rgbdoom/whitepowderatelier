@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Conceito A2: Portal da Vila — Arco aberto de vila (Vila Mariana) + ponto de calor/torra -->
+  <path fill="#000000" d="
+    M 44,218
+    V 120
+    A 84,84 0 0 1 212,120
+    V 218
+    H 170
+    V 120
+    A 42,42 0 0 0 86,120
+    V 218
+    Z
+  "/>
+  <circle cx="128" cy="126" r="22" fill="#000000"/>
+</svg>

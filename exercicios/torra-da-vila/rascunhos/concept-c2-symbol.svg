@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Conceito C2: Janela Dupla — Dois arcos geminados sob lintel editorial (dois fundadores / MG+SP) -->
+  <rect x="36" y="36" width="184" height="26" fill="#000000"/>
+  <path fill-rule="evenodd" fill="#000000" d="
+    M 36,220 V 128 A 46,46 0 0 1 128,128 A 46,46 0 0 1 220,128 V 220 Z
+    M 62,220 V 130 A 20,20 0 0 1 102,130 V 220 Z
+    M 154,220 V 130 A 20,20 0 0 1 194,130 V 220 Z
+  "/>
+</svg>

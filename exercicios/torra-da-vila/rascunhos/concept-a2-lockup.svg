@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" width="720" height="256">
+  <!-- Conceito A2 Lockup [exploratório: <text> provisório] -->
+  <g transform="translate(16, 28) scale(0.78)">
+    <path fill="#000000" d="M 44,218 V 120 A 84,84 0 0 1 212,120 V 218 H 170 V 120 A 42,42 0 0 0 86,120 V 218 Z"/>
+    <circle cx="128" cy="126" r="22" fill="#000000"/>
+  </g>
+  <text x="236" y="134" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" letter-spacing="-1" fill="#000000">Torra da Vila</text>
+  <line x1="238" y1="152" x2="640" y2="152" stroke="#000000" stroke-width="1.5"/>
+  <text x="238" y="176" font-family="'Courier New', monospace" font-size="14" font-weight="700" letter-spacing="2.5" fill="#000000">VARGINHA · VILA MARIANA</text>
+</svg>

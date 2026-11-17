@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moodboard Visual (Pesquisa) — Torra da Vila</title>
+<style>
+  :root {
+    --paper: #F4EFE6;
+    --paper-card: #FBF8F3;
+    --ink: #161412;
+    --ink-soft: #57514A;
+    --rule: #D9D0C3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 32px 38px;
+    line-height: 1.4;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+  .kicker {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .meta {
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+  .col {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .col-head {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+  }
+  .col-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .col h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-top: 2px;
+  }
+  .col-vibe {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .ref-item {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+  }
+  .ref-item img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ref-body {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .ref-title {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .ref-title a {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
+    color: #1E4ED8;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+  .ref-body p {
+    color: var(--ink-soft);
+    font-size: 11.8px;
+  }
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 18px;
+  }
+  .panel {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    padding: 16px;
+  }
+  .panel h3 {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 5px;
+  }
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+  }
+  .swatch {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+  }
+  .swatch-box {
+    height: 44px;
+    border: 1px solid rgba(0,0,0,0.12);
+    margin-bottom: 4px;
+  }
+  .avoid-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .avoid-list li::before {
+    content: "× ";
+    color: #E8483C;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="kicker">Passo 5 · Moodboard Visual (Pesquisa de Campo &amp; Repertório)</div>
+      <h1>Torra da Vila — Referências Visuais, Clima &amp; Materialidade</h1>
+    </div>
+    <div class="meta">
+      Briefing: Varginha (MG) → Vila Mariana (SP)<br>
+      Base para geração dos rascunhos (Passo 7)
+    </div>
+  </header>
+
+  <section class="board">
+    <!-- Coluna 1: Lugar, Casa & Hospitalidade -->
+    <div class="col">
+      <div class="col-head">
+        <div class="col-tag">Eixo 01 · Lugar, Casa &amp; Afeto</div>
+        <h2>Vila Mariana &amp; Calor Doméstico</h2>
+        <p class="col-vibe">Tijolo, madeira, ferro preto, verde de quintal e contraste urbano acolhedor — o contrário de cafeteria fria.</p>
+      </div>
+      <div class="ref-item">
+        <img src="moodboard-refs/vilamariana.jpg" alt="Casa na Vila Mariana - Refúgios Urbanos">
+        <div class="ref-body">
+          <div class="ref-title">
+            <span>Casa na Vila Mariana (SP)</span>
+            <a href="https://refugiosurbanos.com.br/imoveis/casa-aconchegante-com-arquitetura-surpreendente-na-vila-mariana/">Fonte ↗</a>
+          </div>
+          <p><strong>O que puxar:</strong> tijolo quente + viga preta + ponto de cor vermelho vivo + quadro tipográfico na bancada + quintal aberto.</p>
+        </div>
+      </div>
+      <div class="ref-item">
+        <img src="moodboard-refs/ubu-home.jpg" alt="Circuito Ubu - Clube de Assinatura">
+        <div class="ref-body">
+          <div class="ref-title">
+            <span>Circuito Ubu (Clube Editorial)</span>
+            <a href="https://www.ubueditora.com.br/">Fonte ↗</a>
+          </div>
+          <p><strong>O que puxar:</strong> tom de clube acolhedor, fio editorial fino, contraste de cor quente sobre fundo profundo e itálico humano.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna 2: Embalagem & Objeto Impresso -->
+    <div class="col">
+      <div class="col-head">
+        <div class="col-tag">Eixo 02 · Rigor de Torra &amp; Embalagem</div>
+        <h2>Saco Padrão + Etiqueta de Lote</h2>
+        <p class="col-vibe">Base clara fosca como palco para etiquetas técnicas coloridas e tipografia de forte presença.</p>
+      </div>
+      <div class="ref-item">
+        <img src="moodboard-refs/tocaya.jpg" alt="Tocaya Torradores - Casa Rex">
+        <div class="ref-body">
+          <div class="ref-title">
+            <span>Tocaya Torradores (Casa Rex, MG)</span>
+            <a href="https://casarex.com/cases/tocaya/">Fonte ↗</a>
+          </div>
+          <p><strong>O que puxar:</strong> saco off-white fosco, moldura gráfica que estrutura o texto e selos adesivos vibrantes (verde, rosa, vermelho) por lote.</p>
+        </div>
+      </div>
+      <div class="ref-item">
+        <img src="moodboard-refs/mindsparkle.jpg" alt="Alto Roasters - Mindsparkle Mag">
+        <div class="ref-body">
+          <div class="ref-title">
+            <span>Alto Roasters (Print Object)</span>
+            <a href="https://mindsparklemag.com/designs/alto-roasters-coffee-brand-identity-packaging">Fonte ↗</a>
+          </div>
+          <p><strong>O que puxar:</strong> tipografia gigante que abraça o saco + etiqueta modular retangular colorida com dados técnicos em monoespaçada.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna 3: Expressividade, Cor & Editorial Independente -->
+    <div class="col">
+      <div class="col-head">
+        <div class="col-tag">Eixo 03 · Cor Assumida &amp; Voz Queer/MG</div>
+        <h2>Zines, Risografia &amp; Atitude</h2>
+        <p class="col-vibe">Ousadia cromática e composição inclinada/viva da gráfica independente brasileira — sem caricatura.</p>
+      </div>
+      <div class="ref-item">
+        <img src="moodboard-refs/lote42-home.jpg" alt="Mareadas na Maré - Lote 42">
+        <div class="ref-body">
+          <div class="ref-title">
+            <span>Lote 42 (Mareadas na Maré)</span>
+            <a href="https://lote42.com.br/">Fonte ↗</a>
+          </div>
+          <p><strong>O que puxar:</strong> choque cromático assumido (magenta + verde), bloco gráfico em ângulo, condensada de impacto + subtítulo técnico.</p>
+        </div>
+      </div>
+      <div class="ref-item">
+        <img src="moodboard-refs/lote42-riso.jpg" alt="Infantojuvenil - Gustavo Piqueira / Lote 42">
+        <div class="ref-body">
+          <div class="ref-title">
+            <span>Infantojuvenil (Lote 42 / Piqueira)</span>
+            <a href="https://lote42.com.br/produto/infantojuvenil/">Fonte ↗</a>
+          </div>
+          <p><strong>O que puxar:</strong> caixa/lombada branca como objeto gráfico, condensada vibrante de borda a borda e microtexto na lateral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-row">
+    <div class="panel">
+      <h3>Paleta Extraída das Referências</h3>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-box" style="background:#F4EFE6;"></div>Papel<br>#F4EFE6</div>
+        <div class="swatch"><div class="swatch-box" style="background:#161412;"></div>Carvão<br>#161412</div>
+        <div class="swatch"><div class="swatch-box" style="background:#E03E36;"></div>Goiaba<br>#E03E36</div>
+        <div class="swatch"><div class="swatch-box" style="background:#2A9D68;"></div>Folha<br>#2A9D68</div>
+        <div class="swatch"><div class="swatch-box" style="background:#D9387A;"></div>Magenta<br>#D9387A</div>
+        <div class="swatch"><div class="swatch-box" style="background:#7A87E8;"></div>Lavanda<br>#7A87E8</div>
+        <div class="swatch"><div class="swatch-box" style="background:#E8B85C;"></div>Ocre<br>#E8B85C</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Tipografia Extraída das Referências</h3>
+      <div style="font-family: Georgia, serif; font-size:24px; font-weight:700; margin-bottom:4px;">Torra da Vila</div>
+      <div style="font-size:12px; color:var(--ink-soft); margin-bottom:6px;">Serifada calorosa / condensada editorial nos títulos;</div>
+      <div style="font-family:'Courier New', monospace; font-size:11px; background:#EFE9DE; padding:6px 8px; border-left:2px solid #161412;">LOTE 04 · VARGINHA/MG · NATURAL · 250G</div>
+    </div>
+
+    <div class="panel">
+      <h3>Anti-Moodboard (Bloqueado)</h3>
+      <ul class="avoid-list">
+        <li>Estopa, kraft rústico "de fazenda" e marrom apagado.</li>
+        <li>Minimalismo clínico branco sem calor doméstico.</li>
+        <li>Grão, xícara, fumaça ou ramo botânico clichê.</li>
+        <li>ET literal de Varginha ou arco-íris estereotipado.</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

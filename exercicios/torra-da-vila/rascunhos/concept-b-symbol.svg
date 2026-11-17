@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Conceito B: Selo Editorial TdV — Etiqueta chanfrada com monograma T·V dividido por barra de edição -->
+  <path fill-rule="evenodd" fill="#000000" d="
+    M 28,44 H 192 L 228,80 V 212 H 28 Z
+    M 50,74 H 116 V 96 H 94 V 182 H 72 V 96 H 50 Z
+    M 140,74 H 164 L 174,142 L 184,74 H 208 L 186,182 H 162 Z
+  "/>
+  <!-- Ponto editorial separador (evita leitura literal "TV") -->
+  <circle cx="128" cy="128" r="10" fill="#FFFFFF"/>
+</svg>

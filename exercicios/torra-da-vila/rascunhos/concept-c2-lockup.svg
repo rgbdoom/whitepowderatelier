@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" width="720" height="256">
+  <!-- Conceito C2 Lockup [exploratório: <text> provisório] -->
+  <g transform="translate(16, 28) scale(0.78)">
+    <rect x="36" y="36" width="184" height="26" fill="#000000"/>
+    <path fill-rule="evenodd" fill="#000000" d="
+      M 36,220 V 128 A 46,46 0 0 1 128,128 A 46,46 0 0 1 220,128 V 220 Z
+      M 62,220 V 130 A 20,20 0 0 1 102,130 V 220 Z
+      M 154,220 V 130 A 20,20 0 0 1 194,130 V 220 Z
+    "/>
+  </g>
+  <text x="236" y="134" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-style="italic" font-weight="700" letter-spacing="-0.5" fill="#000000">Torra da Vila</text>
+  <text x="238" y="172" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="3.5" fill="#000000">CAFÉS ESPECIAIS · SP / MG</text>
+</svg>

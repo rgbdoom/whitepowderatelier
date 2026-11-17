@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" width="720" height="256">
+  <!-- Conceito A Lockup [exploratório: <text> provisório para validação tipográfica] -->
+  <g transform="translate(16, 28) scale(0.78)">
+    <path d="M 36,36 H 220 V 72 H 146 V 118 H 110 V 72 H 36 Z" fill="#000000"/>
+    <path d="M 38,94 H 76 L 128,192 L 180,94 H 218 L 146,224 H 110 Z" fill="#000000"/>
+  </g>
+  <text x="240" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" letter-spacing="-1" fill="#000000">Torra da Vila</text>
+  <text x="242" y="176" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="4.5" fill="#000000">CAFÉS ESPECIAIS · SP / MG</text>
+</svg>
