@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGBDOOM Studio — Direção de Arte</title>
+
+  <!-- CDNs (zero instalação) -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Nossos módulos -->
+  <script src="js/knowledge-db.js"></script>
+  <script src="js/studio.js"></script>
+
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --panel: #242424;
+      --line: #3a3a3a;
+      --text: #f2efe9;
+      --muted: #9a958c;
+      --accent: #ff6b35;
+      --paper: #f8f5f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Space Mono", ui-monospace, monospace;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header.topbar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+    }
+    header.topbar .brand { font-weight: 700; letter-spacing: 0.04em; }
+    header.topbar .brand span { color: var(--accent); }
+    .spacer { flex: 1; }
+
+    main {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 16px;
+    }
+    #panel-chat { width: 300px; border-right: 1px solid var(--line); background: var(--panel); }
+    #panel-canvas { flex: 1; align-items: center; justify-content: flex-start; overflow: auto; background: var(--bg); }
+    #panel-variantes { width: 280px; border-left: 1px solid var(--line); background: var(--panel); }
+
+    h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    label { font-size: 11px; color: var(--muted); display: block; margin: 12px 0 4px; }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      background: #1a1a1a;
+      color: var(--text);
+      border: 1px solid var(--line);
+      font-family: inherit;
+      font-size: 12px;
+      padding: 10px;
+      resize: vertical;
+    }
+    textarea:focus { outline: 1px solid var(--accent); }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 9px 12px;
+      font-family: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    button:hover { filter: brightness(1.08); }
+    button.ghost {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+    button.ghost.active { border-color: var(--accent); color: var(--accent); }
+
+    .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+
+    #log-steps {
+      margin-top: 16px;
+      font-size: 11px;
+      color: var(--muted);
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    #log-steps .entry { padding: 2px 0; border-bottom: 1px dashed var(--line); }
+    #log-steps .entry b { color: var(--text); font-weight: 400; }
+    #log-steps .step-num { color: var(--accent); display: inline-block; width: 18px; }
+
+    #gate-message {
+      margin-top: 12px;
+      padding: 10px;
+      background: #2a1f14;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-size: 12px;
+      display: none;
+    }
+
+    #moodboard-container { padding: 20px; }
+    #moodboard-container canvas { max-width: 100%; height: auto; display: block; }
+
+    .control-group { margin-top: 18px; }
+    .swatch-row { display: flex; gap: 4px; margin-top: 6px; }
+    .swatch { flex: 1; height: 28px; border: 1px solid #000; }
+
+    .mode-select { display: flex; gap: 6px; margin-top: 4px; }
+    .mode-select button { flex: 1; padding: 6px 4px; font-size: 10px; }
+
+    .info-line { font-size: 10px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">RGBDOOM <span>STUDIO</span></div>
+    <div class="info-line" style="margin:0">direção de arte · base <code>conhecimento/</code> · 3 partidos</div>
+    <div class="spacer"></div>
+    <button id="btn-export" class="ghost">Exportar PNG</button>
+    <button id="btn-copiar-estado" class="ghost">Copiar Estado JSON</button>
+  </header>
+
+  <main>
+    <!-- PAINEL ESQUERDO: Chat / Briefing -->
+    <section id="panel-chat" class="panel">
+      <h2>Briefing</h2>
+      <textarea id="briefing-input" placeholder="Descreva o projeto...&#10;&#10;Ex.: Torra da Vila — cafeteria de café especial em São Paulo. Público 25–40, urbano. Tensão: artesanal × escala industrial."></textarea>
+
+      <label>Nível de autonomia</label>
+      <div class="mode-select" id="mode-selector">
+        <button data-modo="supervisionado">Supervisionado</button>
+        <button data-modo="padrao" class="ghost active">Padrão</button>
+        <button data-modo="autonomo">Autônomo</button>
+      </div>
+
+      <label>Referências (Passos 3–4, uma URL por linha)</label>
+      <textarea id="refs-input" placeholder="https://fontsinuse.com/...&#10;https://www.itsnicethat.com/..."></textarea>
+
+      <div class="btn-row">
+        <button id="btn-gerar">Gerar Moodboard</button>
+        <button id="btn-limpar" class="ghost">Limpar</button>
+      </div>
+
+      <div id="gate-message"></div>
+      <div id="log-steps"></div>
+    </section>
+
+    <!-- PAINEL CENTRAL: Canvas -->
+    <section id="panel-canvas" class="panel">
+      <div id="moodboard-container"></div>
+    </section>
+
+    <!-- PAINEL DIREITO: Variantes -->
+    <section id="panel-variantes" class="panel">
+      <h2>Variantes</h2>
+      <div class="control-group">
+        <label>Partido</label>
+        <div class="btn-row" id="partido-selector">
+          <button data-partido="seguro" class="ghost">Seguro</button>
+          <button data-partido="tensionado" class="ghost active">Tensionado</button>
+          <button data-partido="provocativo" class="ghost">Provocativo</button>
+        </div>
+        <div class="info-line" id="partido-desc"></div>
+      </div>
+
+      <div class="control-group" id="paleta-controls">
+        <label>Paleta</label>
+        <div class="swatch-row" id="swatch-row"></div>
+        <div class="btn-row">
+          <button class="ghost" id="btn-paleta-ciclar">Ciclar paleta</button>
+        </div>
+      </div>
+
+      <div class="control-group" id="tipo-controls">
+        <label>Tipografia</label>
+        <div class="info-line" id="tipo-info"></div>
+        <div class="btn-row">
+          <button class="ghost" id="btn-tipo-ciclar">Ciclar duo</button>
+        </div>
+      </div>
+
+      <div class="control-group" id="textura-controls">
+        <label>Textura</label>
+        <div class="info-line" id="textura-info"></div>
+        <div class="btn-row">
+          <button class="ghost" id="btn-textura-ciclar">Ciclar textura</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Decisões ativas</label>
+        <div class="info-line" id="decisoes-info"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      // ── Estado da aplicação ──────────────────────────────────────────────
+      const app = {
+        decisoes: null,
+        partidos: null,
+        partidoAtual: "tensionado",
+        referencias: [],
+        modo: "padrao",
+        paletaIdx: 0,
+        tipoIdx: 0,
+        texturaIdx: 0
+      };
+
+      const $ = (sel) => document.querySelector(sel);
+
+      // ── Engines ──────────────────────────────────────────────────────────
+      const resolver = new ResolverEngine(KNOWLEDGE);
+      const moodboard = new MoodboardEngine($("#moodboard-container"));
+      const pipeline = new StepPipeline(resolver, {
+        atualizarLog: (step, msg) => adicionarLog(step, msg),
+        mostrarGate: (step, resultado) => {
+          const el = $("#gate-message");
+          el.style.display = "block";
+          el.innerHTML = "<b>Parada obrigatória (Passo " + step + ", modo " + app.modo + ")</b><br>" +
+            (passo[step] || "Valide e continue, ou ajuste os controles ao lado.");
+        },
+        finalizar: (state) => {
+          const el = $("#gate-message");
+          el.style.display = "block";
+          el.innerHTML = "Executado até o Passo 9 (modo autônomo). Copie o estado JSON para o processo.md.";
+        },
+        renderMoodboard: (decisoes, partido, partidos) => {
+          app.decisoes = decisoes;
+          app.partidos = partidos;
+          app.partidoAtual = partido.nome ? partido.nome.toLowerCase() : "tensionado";
+          atualizarControles();
+          carregarFontes(decisoes).then(() => moodboard.render(decisoes, partido, app.referencias));
+        },
+        renderRascunhos: () => {} // MVP: rascunhos descritos no estado JSON
+      });
+
+      const passo = {
+        5: "Moodboard gerado — valide o clima/tom antes dos rascunhos.",
+        7: "Rascunhos prontos — escolha, corte ou misture antes da execução (Passo 8).",
+        8: "Execução final — valide o desdobramento antes de entregar."
+      };
+
+      // ── Utilidades de UI ─────────────────────────────────────────────────
+      function adicionarLog(step, msg) {
+        const log = $("#log-steps");
+        const div = document.createElement("div");
+        div.className = "entry";
+        div.innerHTML = '<span class="step-num">' + step + "</span><b>" + msg + "</b>";
+        log.appendChild(div);
+        log.scrollTop = log.scrollHeight;
+      }
+
+      function atualizarControles() {
+        if (!app.decisoes) return;
+        const d = app.decisoes;
+        const partido = partidoAtual();
+
+        // swatches
+        const row = $("#swatch-row");
+        row.innerHTML = "";
+        (partido.paleta || d.paleta.cores).forEach((c) => {
+          const s = document.createElement("div");
+          s.className = "swatch";
+          s.style.background = c;
+          s.title = c;
+          row.appendChild(s);
+        });
+
+        $("#tipo-info").textContent = (partido.tipografia || d.tipografia).duo || "";
+        $("#textura-info").textContent = "textura: " + (partido.textura || d.textura);
+        $("#partido-desc").textContent = partido.descricao || "";
+
+        const tens = (app.partidos && app.partidos) ? app.partidos : null;
+        $("#decisoes-info").innerHTML =
+          "paleta <b>" + d.paleta.nome + "</b> · mood " + (d.mood.length ? d.mood.join(" / ") : "—") +
+          "<br>vazio ideal <b>" + ((partido.composicao && partido.composicao.vazioIdeal) || d.composicao.vazioIdeal) + "%</b>";
+      }
+
+      function partidoAtual() {
+        if (!app.partidos) return app.decisoes ? construirPartidoFallback() : {};
+        return app.partidos[app.partidoAtual] || app.partidos.tensionado;
+      }
+
+      function construirPartidoFallback() {
+        return { paleta: app.decisoes.paleta.cores, tipografia: app.decisoes.tipografia, textura: app.decisoes.textura, ousadia: "media", descricao: "" };
+      }
+
+      // ── Fontes dinâmicas (Google Fonts) ──────────────────────────────────
+      function carregarFontes(decisoes) {
+        const fams = [];
+        const t = decisoes.tipografia;
+        if (t && t.display && t.display.google) fams.push(t.display.google);
+        if (t && t.corpo && t.corpo.google) fams.push(t.corpo.google);
+        if (!fams.length) return Promise.resolve();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://fonts.googleapis.com/css2?family=" + fams.join("&family=") + "&display=swap";
+        document.head.appendChild(link);
+        return document.fonts ? document.fonts.ready : Promise.resolve();
+      }
+
+      function reRender() {
+        if (!app.decisoes) return;
+        const partido = partidoAtual();
+        moodboard.render(app.decisoes, partido, app.referencias);
+        atualizarControles();
+      }
+
+      // ── Eventos ──────────────────────────────────────────────────────────
+      $("#btn-gerar").addEventListener("click", () => {
+        const texto = $("#briefing-input").value;
+        if (!texto.trim()) { adicionarLog(1, "Nenhum briefing colado — escreva antes."); return; }
+        $("#gate-message").style.display = "none";
+        $("#log-steps").innerHTML = "";
+        app.referencias = $("#refs-input").value.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+        pipeline.setModo(app.modo);
+        pipeline.executar(texto);
+      });
+
+      $("#btn-limpar").addEventListener("click", () => {
+        $("#briefing-input").value = "";
+        $("#refs-input").value = "";
+        $("#log-steps").innerHTML = "";
+        $("#gate-message").style.display = "none";
+      });
+
+      document.querySelectorAll("#mode-selector button").forEach((b) => {
+        b.addEventListener("click", () => {
+          document.querySelectorAll("#mode-selector button").forEach((x) => x.classList.remove("active"));
+          b.classList.add("active");
+          app.modo = b.dataset.modo;
+        });
+      });
+
+      document.querySelectorAll("#partido-selector button").forEach((b) => {
+        b.addEventListener("click", () => {
+          document.querySelectorAll("#partido-selector button").forEach((x) => x.classList.remove("active"));
+          b.classList.add("active");
+          app.partidoAtual = b.dataset.partido;
+          reRender();
+        });
+      });
+
+      $("#btn-paleta-ciclar").addEventListener("click", () => {
+        if (!app.decisoes) return;
+        const nomes = Object.keys(KNOWLEDGE.paletas);
+        app.paletaIdx = (app.paletaIdx + 1) % nomes.length;
+        const p = partidoAtual();
+        p.paleta = KNOWLEDGE.paletas[nomes[app.paletaIdx]].slice();
+        moodboard.render(app.decisoes, p, app.referencias);
+        atualizarControles();
+      });
+
+      $("#btn-tipo-ciclar").addEventListener("click", () => {
+        if (!app.decisoes) return;
+        const duos = [KNOWLEDGE.tipografia.displaySerifadas, KNOWLEDGE.tipografia.grotescas, KNOWLEDGE.tipografia.editoriais, KNOWLEDGE.tipografia.expressivas];
+        app.tipoIdx = (app.tipoIdx + 1) % duos.length;
+        const p = partidoAtual();
+        const f = duos[app.tipoIdx][0];
+        p.tipografia = Object.assign({}, app.decisoes.tipografia, { display: f, duo: "duo manual: " + f.nome });
+        moodboard.render(app.decisoes, p, app.referencias);
+        atualizarControles();
+      });
+
+      $("#btn-textura-ciclar").addEventListener("click", () => {
+        if (!app.decisoes) return;
+        const tipos = ["grain", "limpo", "brutalista", "risografia"];
+        app.texturaIdx = (app.texturaIdx + 1) % tipos.length;
+        const p = partidoAtual();
+        p.textura = tipos[app.texturaIdx];
+        moodboard.render(app.decisoes, p, app.referencias);
+        atualizarControles();
+      });
+
+      $("#btn-export").addEventListener("click", () => {
+        const url = moodboard.exportarPNG();
+        if (!url) return;
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "rgbdoom-moodboard.png";
+        a.click();
+      });
+
+      $("#btn-copiar-estado").addEventListener("click", () => {
+        const estado = {
+          briefing: pipeline.state.briefing || null,
+          tensoes: (pipeline.state.step2 && pipeline.state.step2.tensoes || []).map((t) => t.id),
+          fichas: (pipeline.state.step2 && pipeline.state.step2.fichas || []).map((f) => f.id),
+          decisões: app.decisoes,
+          partidos: app.partidos
+        };
+        const json = JSON.stringify(estado, null, 2);
+        navigator.clipboard.writeText(json).then(() => {
+          adicionarLog(9, "Estado copiado para a área de transferência");
+        }).catch(() => {
+          prompt("Copie manualmente:", json);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
